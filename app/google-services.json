@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "386544224711",
+    "firebase_url": "https://mypham-a120f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mypham-a120f",
+    "storage_bucket": "mypham-a120f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386544224711:android:8708d05fe521ed3db971e2",
+        "android_client_info": {
+          "package_name": "com.example.myphamapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386544224711-j59q73fpp5igj8s5d3pcjdo4d09qmc59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHzF_GVzmrgASjyPO0Ft8RsoX7kdN24aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386544224711-j59q73fpp5igj8s5d3pcjdo4d09qmc59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
