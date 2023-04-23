@@ -38,7 +38,7 @@ class rv_sanpham : AppCompatActivity() {
                         val spData = empSnap.getValue(Sanpham::class.java)
                         sanpham.add(spData!!)
                     }
-                    val madapter = sanphamAdapter(sanpham)
+                    val madapter = sanphamAdapter(sanpham,this@rv_sanpham)
 //                    binding.recycleview.adapter = sanphamAdapter(sanpham)
                     binding.recycleview.adapter = madapter
 
@@ -52,13 +52,12 @@ class rv_sanpham : AppCompatActivity() {
                             intent.putExtra("GiaSP", sanpham[position].GiaSP)
                             intent.putExtra("SoluongSP", sanpham[position].SoluongSP)
                             intent.putExtra("AnhSP", sanpham[position].AnhSP)
-                            intent.putExtra("Id_danhmuc", sanpham[position].Id_danhmuc)
+                            intent.putExtra("Id_danhmuc", sanpham[position].id_danhmuc)
                             intent.putExtra("NhacungcapSP", sanpham[position].NhacungcapSP)
                             intent.putExtra("MotaSP", sanpham[position].MotaSP)
                             intent.putExtra("sl_daban", sanpham[position].sl_daban)
                             intent.putExtra("date", sanpham[position].date)
                             startActivity(intent)
-
                         }
                     })
                 }

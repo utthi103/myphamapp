@@ -48,39 +48,11 @@
         android:height="50dp"
         android:hint="id_danhmuc"/>
 
-    <EditText
-        android:id="@+id/nhacungcap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:height="50dp"
-        android:hint="nha cung cap"/>
-
-    <EditText
-        android:id="@+id/mota"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:height="50dp"
-        android:hint="mota"/>
-
-    <EditText
-        android:id="@+id/soluongdaban"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:height="50dp"
-        android:text="soluongdaban" />
-
-    <EditText
-        android:id="@+id/ngay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:height="50dp"
-        android:hint="ngay"/>
-
     <Button
-        android:id="@+id/btnsave"
+        android:id="@+id/btnlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="save" />
+        android:text="login" />
 
     <Button
         android:id="@+id/btninsert"
@@ -104,4 +76,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nav" />
+
+    <Button
+        android:id="@+id/cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cart" />
+
+    <Button
+        android:id="@+id/danhmuc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danhmuc" />
+
 </LinearLayout>

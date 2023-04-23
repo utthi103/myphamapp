@@ -1,7 +1,10 @@
 package com.example.myphamapp
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -49,12 +52,20 @@ class MainActivity : AppCompatActivity() {
             val intent  = Intent(this,detail::class.java)
             startActivity(intent)
         }
-        binding.btnsave.setOnClickListener {
-            insert()
+        binding.btnlogin.setOnClickListener {
+//            insert()
+            val sharedPreferences = getSharedPreferences("my_preferences", Context.MODE_PRIVATE)
+            val iduser = sharedPreferences.getString("iduser",null)
+            val intent  = Intent(this,login::class.java)
+            startActivity(intent)
         }
 
         binding.btninsert.setOnClickListener {
             val intent  = Intent(this,insertsp::class.java)
+            startActivity(intent)
+        }
+        binding.cart.setOnClickListener {
+            val intent  = Intent(this,cart_design::class.java)
             startActivity(intent)
         }
 
@@ -68,6 +79,14 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "danh sach san pham", Toast.LENGTH_SHORT).show()
 
             val intent  = Intent(this,navbottom::class.java)
+//            val intent  = Intent(this,fr_home::class.java)
+            startActivity(intent)
+        }
+        binding.danhmuc.setOnClickListener {
+            Toast.makeText(this, "danh sach san pham", Toast.LENGTH_SHORT).show()
+
+            val intent  = Intent(this,insertdanhmuc::class.java)
+//            val intent  = Intent(this,fr_home::class.java)
             startActivity(intent)
         }
 
@@ -116,40 +135,40 @@ class MainActivity : AppCompatActivity() {
 //    @RequiresApi(Build.VERSION_CODES.O)
     @RequiresApi(Build.VERSION_CODES.O)
     private fun insert() {
-        val Id_SanPham = dbRef.push().key!!
-        val ten = binding.ten.text.toString()
-        val gia = binding.gia.text.toString()
-        val soluong = binding.soluong.text.toString()
-        val danhmuc = binding.idDanhmuc.text.toString()
-        val nhacungcap = binding.nhacungcap.text.toString()
-        val mota = binding.mota.text.toString()
-        binding.soluongdaban.setText("0")
-        val currentDateTime = LocalDateTime.now()
-        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
-        val formattedDateTime = currentDateTime.format(formatter)
-        binding.ngay.setText(formattedDateTime)
-        val sanpham = Sanpham(
-            Id_SanPham,
-            ten,
-            gia,
-            soluong,
-            avatar,
-            danhmuc,
-            nhacungcap,
-            mota,
-            "0",
-            formattedDateTime
-        )
-
-        dbRef.child(Id_SanPham).setValue(sanpham).addOnCompleteListener {
-            Toast.makeText(this, "Thêm dữ liệu thành công", Toast.LENGTH_SHORT).show()
-//            binding.ten.setText("")
-//            binding.gia.setText("")
-//            binding.edtEmpSalary.setText("")
-
-        }.addOnFailureListener { err ->
-            Toast.makeText(this, "ERR ${err.message}", Toast.LENGTH_SHORT).show()
-        }
+//        val Id_SanPham = dbRef.push().key!!
+//        val ten = binding.ten.text.toString()
+//        val gia = binding.gia.text.toString()
+//        val soluong = binding.soluong.text.toString()
+//        val danhmuc = binding.idDanhmuc.text.toString()
+//        val nhacungcap = binding.nhacungcap.text.toString()
+//        val mota = binding.mota.text.toString()
+//        binding.soluongdaban.setText("0")
+//        val currentDateTime = LocalDateTime.now()
+//        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
+//        val formattedDateTime = currentDateTime.format(formatter)
+//        binding.ngay.setText(formattedDateTime)
+//        val sanpham = Sanpham(
+//            Id_SanPham,
+//            ten,
+//            gia,
+//            soluong,
+//            avatar,
+//            danhmuc,
+//            nhacungcap,
+//            mota,
+//            "0",
+//            formattedDateTime
+//        )
+//
+//        dbRef.child(Id_SanPham).setValue(sanpham).addOnCompleteListener {
+//            Toast.makeText(this, "Thêm dữ liệu thành công", Toast.LENGTH_SHORT).show()
+////            binding.ten.setText("")
+////            binding.gia.setText("")
+////            binding.edtEmpSalary.setText("")
+//
+//        }.addOnFailureListener { err ->
+//            Toast.makeText(this, "ERR ${err.message}", Toast.LENGTH_SHORT).show()
+//        }
     }
 
     fun insert_image(view: View) {}

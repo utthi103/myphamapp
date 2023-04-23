@@ -15,6 +15,18 @@
         android:theme="@style/Theme.Myphamapp"
         tools:targetApi="31">
         <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".insertdanhmuc"
+            android:exported="false" />
+        <activity
+            android:name=".rv_cart"
+            android:exported="false" />
+        <activity
+            android:name=".cart_design"
+            android:exported="false" />
+        <activity
             android:name=".navbottom"
             android:exported="false" />
         <activity

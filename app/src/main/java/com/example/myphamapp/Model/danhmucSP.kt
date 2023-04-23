@@ -1,8 +1,8 @@
 package com.example.myphamapp.Model
 
 class danhmucSP(
-    val Id_danhmuc:Int,
-    val Ten_danhmuc:String,
-    val MotaSP: String
+    val id_danhmuc: String? = null,
+    val Ten_danhmuc:String? = null,
+    val MotaSP: String? = null
 ) {
 }

@@ -180,10 +180,10 @@
         android:layout_height="50dp"
         android:layout_marginBottom="35dp"
         android:padding="14dp"
-        android:src="@drawable/icon_cart"
+        android:src="@drawable/icon_back"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="@id/Tensp"
-        android:background="@drawable/cart_shape"
+        android:background="@drawable/cricle"
         app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
         android:id="@+id/btn_order"
